@@ -1,0 +1,61 @@
+
+
+\documentclass[OPS,authoryear,toc]{lsstdoc}
+% lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
+
+% Package imports go here.
+
+% Local commands go here.
+\input{aglossary.tex}
+% To add a short-form title:
+% \title[Short title]{Title}
+\title{Framing LSST in the open data centre framework}
+
+% Optional subtitle
+% \setDocSubtitle{A subtitle}
+
+\author{%
+William O'Mullane
+}
+
+\setDocRef{OPSTN-001}
+
+\date{\today}
+
+% Optional: name of the document's curator
+% \setDocCurator{The Curator of this Document}
+
+\setDocAbstract{%
+After the Kavli workshop Petabytes to Science we have a suggested framework for data processing and disemination. This note cosiders how LSST might fit in such a scheme.
+}
+
+% Change history defined here.
+% Order: oldest first.
+% Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
+% See LPM-51 for version number policy.
+\setDocChangeRecord{%
+  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{William O'Mullane}
+}
+
+\begin{document}
+
+% Create the title page.
+% Table of contents is added automatically with the "toc" class option.
+
+\mkshorttitle
+%switch to \maketitle if you wan the title page and toc
+
+
+% ADD CONTENT HERE ... a file per section can be good for editing
+\input{body}
+
+\appendix
+% Include all the relevant bib files.
+% https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
+\section{References} \label{sec:bib}
+\bibliography{lsst,lsst-dm,refs_ads,refs,books}
+
+%Make sure lsst-texmf/bin/generateAcronyms.py is in your path
+\section{Acronyms used in this document}\label{sec:acronyms}
+\input{acronyms.tex}
+\end{document}

@@ -1,0 +1,29 @@
+
+\section{Plugable service oriented architecture} \label{sec:arc}
+
+In the Kavli workshop in Vegas (Feb 2019) we took a long term view to astronomy archives and data processing.
+We suggested a layered service model as depicted in \figref{fig:CI}\footnote{The full document is here \url{https://petabytestoscience.github.io/PetaBytes-2019-04-26.pdf}}.
+Our requirements are no longer unique and we have access to a wealth of open source \gls{software}, commodity hardware, and managed \gls{cloud} services (offered by commercial providers and federally-funded institutions) that are well positioned to meet the needs of LSST \cite{2019AAS...23345706M, 2019AAS...23324505B}.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.\textwidth]{images/CI-Layers}
+    \caption{An example a \gls{cyberinfrastructure} built on an Infrastructure as Code design model. Note that while this example does not have astronomy-specific tooling, our recommendations highlight the importance of developing astro-specific layers that are fully accessible to scientists in both  the application  and the graphical interface layers. \figref{fig:CI-LSST} presents an LSST/Astronomy instantiation of this.}
+    \label{fig:CI}
+\end{figure}\
+
+
+We took \figref{fig:CI} and made a more LSST oriented version in \figref{fig:CI-LSST}. This is pretty close to how we are currently but we do not treat the compute and storage as pure services.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.\textwidth]{images/CI-LSST}
+    \caption{An example \gls{LSST}  \gls{cyberinfrastructure} built analogous to the \gls{CI} model shown in \figref{fig:CI}.}
+% Original https://docs.google.com/presentation/d/16w5WVe-_xNLXWudNKqJu9IEKGDQ8oIB0eDiqWP_SUnE/edit?usp=sharing
+    \label{fig:CI-LSST}
+\end{figure}\
+
+
+
+
