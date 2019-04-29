@@ -4,12 +4,18 @@
 % lsstdoc documentation: https://lsst-texmf.lsst.io/lsstdoc.html
 
 % Package imports go here.
+%\usepackage{newtxtext}
+
+
 
 % Local commands go here.
+
 \input{aglossary.tex}
+\makenoidxglossaries
+
 % To add a short-form title:
 % \title[Short title]{Title}
-\title{Framing LSST in the open data centre framework}
+\title{Alternative science operations approach for  LSST }
 
 % Optional subtitle
 % \setDocSubtitle{A subtitle}
@@ -56,6 +62,7 @@ After the Kavli workshop Petabytes to Science we have a suggested framework for 
 \bibliography{lsst,lsst-dm,refs_ads,refs,books}
 
 %Make sure lsst-texmf/bin/generateAcronyms.py is in your path
-\section{Acronyms used in this document}\label{sec:acronyms}
+\section{Acronyms and glossary items}\label{sec:acronyms}
+%having problems for now \printnoidxglossaries
 \input{acronyms.tex}
 \end{document}

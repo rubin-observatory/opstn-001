@@ -103,3 +103,5 @@ ATLAS: The Asteroid Terrestrial-impact Last Alert System
 AAG:Astronomy and Astrophysics Research Grants, an \gls{NSF} program
 CMB:Cosmic Microwave Background
 UA:University of Arizona
+SDQA:Science Data Quality Assurance
+AMCL:Aura Management Council for LSST
