@@ -15,11 +15,14 @@ from __future__ import print_function
 import httplib2
 import os
 import sys
+import pickle
 
-from apiclient import discovery
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
+from google_auth_oauthlib.flow import InstalledAppFlow
+
+from googleapiclient.discovery import build
 
 try:
     import argparse
@@ -31,10 +34,10 @@ except ImportError:
 # at ~/.credentials/sheets.googleapis.com-python-quickstart.json
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly'
 CLIENT_SECRET_FILE = 'client_secret.json'
-APPLICATION_NAME = 'Google Sheets API Python Quickstart'
+APPLICATION_NAME = 'Python LSST'
 
 
-def get_credentials():
+def getCredentials():
     """Gets valid user credentials from storage.
 
     If nothing has been stored, or if the stored credentials are invalid,
@@ -43,36 +46,34 @@ def get_credentials():
     Returns:
         Credentials, the obtained credential.
     """
-    home_dir = os.path.expanduser('~')
-    credential_dir = os.path.join(home_dir, '.credentials')
-    if not os.path.exists(credential_dir):
-        os.makedirs(credential_dir)
-    credential_path = os.path.join(credential_dir,
-                                   'sheets.googleapis.com-python-quickstart.json')
+    credentials = None
+    if os.path.exists('token.pickle'):
+        with open('token.pickle', 'rb') as token:
+            credentials = pickle.load(token)
 
-    store = Storage(credential_path)
-    credentials = store.get()
-    if not credentials or credentials.invalid:
-        flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
-        flow.user_agent = APPLICATION_NAME
-        if flags:
-            credentials = tools.run_flow(flow, store, flags)
-        else: # Needed only for compatibility with Python 2.6
-            credentials = tools.run(flow, store)
-        print('Storing credentials to ' + credential_path)
+    if not credentials or not credentials.valid:
+        if credentials and credsentials.expired and credentials.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, SCOPES )
+            flow.user_agent = APPLICATION_NAME
+            credentials = flow.run_local_server()
+        with open('token.pickle', 'wb') as token:
+            pickle.dump(credentials, token)
+
     return credentials
 
 
 def outtail( tout):
-    print ("\\end{longtable} \\normalsize", file=tout)
+    print (r'\end{longtable}', file=tout)
     tout.close()
     return
 
 def outhead(ncols, tout,name, cap):
 
-    print ("\\tiny \\begin{longtable} {", file=tout, end='')
+    print (" \\begin{longtable} {", file=tout, end='')
     c =1
-    print (" |p{0.22\\textwidth} ", file=tout, end='')
+    print (" |p{0.42\\textwidth} ", file=tout, end='')
     for c in range(1,ncols,+1):
        print (" |r ", file=tout, end='')
     print ("|} ", file=tout, )
@@ -101,19 +102,17 @@ def fixTex(text):
 
 
 def main():
-    """
-    grab the sizing sheet and do whatever
-    """
-    credentials = get_credentials()
-    http = credentials.authorize(httplib2.Http())
-    discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
-                    'version=v4')
-    service = discovery.build('sheets', 'v4', http=http,
-                              discoveryServiceUrl=discoveryUrl)
+    # The file token.pickle stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    creds = getCredentials()
 
-    spreadsheetId = '193RVrvaVqTss94p13s9b85cXr6HfWRhajdS5oQ1706A'
-    #spreadsheetId = '1Dzfp7NOyVcEbKDDNmyqk46HpxX2I0XK4rp5aCHnR-L4'
-    rangeName = 'Construction!A1:H'
+    service = build('sheets', 'v4', credentials=creds)
+
+
+    spreadsheetId = '1s-JJW2v-1AIxno0yL5pJzORxWSyxLLSXyHIxgHvQJE4'
+    rangeName = 'DP!A1:C'
+
     result = service.spreadsheets().values().get(
         spreadsheetId=spreadsheetId, range=rangeName).execute()
     values = result.get('values', [])
@@ -124,6 +123,7 @@ def main():
     if not values:
         print('No data found.')
     else:
+        print(values)
         cols = 0
         for row in values:
             if (row and 'Table' in row[0] ):  # got a new table
