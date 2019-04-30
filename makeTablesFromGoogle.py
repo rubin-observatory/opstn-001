@@ -19,9 +19,8 @@ import pickle
 
 from oauth2client import client
 from oauth2client import tools
-from oauth2client.file import Storage
 from google_auth_oauthlib.flow import InstalledAppFlow
-
+from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 
 try:
@@ -52,8 +51,8 @@ def getCredentials():
             credentials = pickle.load(token)
 
     if not credentials or not credentials.valid:
-        if credentials and credsentials.expired and credentials.refresh_token:
-            creds.refresh(Request())
+        if credentials and credentials.expired and credentials.refresh_token:
+            credentials.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, SCOPES )
             flow.user_agent = APPLICATION_NAME
