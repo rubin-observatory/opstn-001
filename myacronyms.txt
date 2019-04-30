@@ -1,3 +1,4 @@
+SRE:Site Reliability Engineering
 VME:Virtual Machine Environment
 TOMS:Telescope Observing Management System
 PDF:Probability Density Function
@@ -105,3 +106,4 @@ CMB:Cosmic Microwave Background
 UA:University of Arizona
 SDQA:Science Data Quality Assurance
 AMCL:Aura Management Council for LSST
+HDF:Hierarchical Data Formatwq

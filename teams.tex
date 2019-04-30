@@ -15,13 +15,16 @@ This team will be responsible for maintaining and evolving LSST’s user access 
 
 \subsubsection{Middleware }
 In a service oriented model with a layered architecture as outlined in \secref{sec:arc} it is essential to have a cross cutting team who compose and debug services.
-Software such as the \texttt{butler}  is not part of the pipeline but the pipeline needs it.
+Software such as the \texttt{butler}  is not part of the pipeline but the pipeline needs it. In house developments such as Qserv should be covered here.
 This would also cover the builds and how the code interacts with the infrastructure (\secref{sec:infra}.
 
-\subsubsection{Infrastructure } \label{ses:infra}
+\subsubsection{Infrastructure, Site Reliability Engineering  } \label{ses:infra}
 This is for deployment of of various systems and pipelines. Configuration is included in this. There needs to be a couple of people who manage keys/secrets
 for access to commodity services. We would need a security resource as well as database expertise.  This then implies using tooling for system management as
 provided by e.g. AWS console.
+
+In general an SRE team is responsible for the availability, latency, performance, efficiency, change management, monitoring, emergency response and capacity planning of their services \cite{Beyer:2016:SRE:3006357}.
+
 This team would include paying for a liaison at any service provider e.g. Amazon professional Services or a Service Manager at NCSA. (2FTE calculated)
 
 \subsubsection{Verification/Operations }
