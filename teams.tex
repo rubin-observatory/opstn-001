@@ -1,0 +1,29 @@
+
+\subsection{Teams }\label{sec:teams}
+\figref{fig:sciopsorg} introduces several teams some of which were not in the original ops proposal. I  little detail is given here about each.
+
+\subsubsection{Observatory Science}
+As in the ops proposal the primary responsibility of this team is to understand the end-to-end impact of the Observatory hardware and environment on the science images and to work with the Observatory Operations department to ensure that the image quality meets requirements.
+
+\textbf{This team may be better  in Observatory operations department }
+
+\subsubsection{Science algorithms and pipelines}
+This team is responsible to assess and assure the alert stream and annual data releases. This includes extensive QA to compare the data products against requirements, and responsibility for the underlying software pipelines themselves. Monitoring and updating the calibration plan and algorithmic implementation is also a responsibility of this team. The Calibration Support Scientist on the Observatory Science team will be responsible for monitoring the physical implementation of the calibration plan at the summit.
+
+\subsubsection{Science platform  }
+This team will be responsible for maintaining and evolving LSST’s user access portal, the Science Platform. This will include keeping up with evolving technologies and computing infrastructure, as well as providing basic code-base maintenance, bug fixes, and low-level response to science community and internal LSST requests for new features.
+
+\subsubsection{Middleware }
+In a service oriented model with a layered architecture as outlined in \secref{sec:arc} it is essential to have a cross cutting team who compose and debug services.
+Software such as the \texttt{butler}  is not part of the pipeline but the pipeline needs it.
+This would also cover the builds and how the code interacts with the infrastructure (\secref{sec:infra}.
+
+\subsubsection{Infrastructure } \label{ses:infra}
+This is for deployment of of various systems and pipelines. Configuration is included in this. There needs to be a couple of people who manage keys/secrets
+for access to commodity services. We would need a security resource as well as database expertise.  This then implies using tooling for system management as
+provided by e.g. AWS console.
+This team would include paying for a liaison at any service provider e.g. Amazon professional Services or a Service Manager at NCSA. (2FTE calculated)
+
+\subsubsection{Verification/Operations }
+This team will take and verify new releases for operations before they are deployed to the operations system. They will monitor the operational system to make sure it is functioning - they should have some science knowledge to know it is actually working properly as opposed to not just giving errors. A team of 4 should be able to handle this.
+Some support for this is assumed from IN2P3 .
