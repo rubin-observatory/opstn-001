@@ -1,4 +1,5 @@
 ## Core latex/pdflatex auxiliary files:
+*.tex.old
 *.aux
 *.lof
 *.log
@@ -240,3 +241,5 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+client_secret.json
+token.pickle
