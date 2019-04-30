@@ -16,6 +16,9 @@ $(OBJ): $(tex) acronyms.tex
 acronyms.tex :$(tex) myacronyms.txt
 	generateAcronyms.py   $(tex)
 
+aglossary.tex :$(tex) myacronyms.txt
+	generateAcronyms.py  -g $(tex)
+
 clean :
 	latexmk -c
 	rm *.pdf *.nav *.bbl *.xdv *.snm

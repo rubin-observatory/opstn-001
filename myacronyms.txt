@@ -1,3 +1,5 @@
+OPSTN:Operations Technical Note, document identifier handle
+AD:Associate Director
 SRE:Site Reliability Engineering
 VME:Virtual Machine Environment
 TOMS:Telescope Observing Management System
@@ -106,4 +108,5 @@ CMB:Cosmic Microwave Background
 UA:University of Arizona
 SDQA:Science Data Quality Assurance
 AMCL:Aura Management Council for LSST
-HDF:Hierarchical Data Formatwq
+HDF:Hierarchical Data Format
+VME:Virtual Machine Environment

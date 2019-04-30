@@ -110,7 +110,7 @@ def main():
 
 
     spreadsheetId = '1s-JJW2v-1AIxno0yL5pJzORxWSyxLLSXyHIxgHvQJE4'
-    rangeName = 'DP!A1:C'
+    rangeName = 'DP!A1:H'
 
     result = service.spreadsheets().values().get(
         spreadsheetId=spreadsheetId, range=rangeName).execute()
@@ -119,6 +119,7 @@ def main():
     name=''
     tout = ''
 
+    rowc=0
     if not values:
         print('No data found.')
     else:
@@ -137,13 +138,15 @@ def main():
                 cols=int(row[2])
 
                 outhead(cols,tout,name,cap)
+                rowc=0
             else:
                 if name and row:
-                    if row[0].startswith('Year') or row[0].startswith('Total'):
+                    if row[0].startswith('Year') or row[0].startswith('Total') or rowc == 0:
                         # print headeri/total in bold
                         outputrow(tout, "\\textbf", row, cols)
                     else:
                         outputrow(tout, "", row, cols)
+                rowc = rowc + 1
     outtail(tout)
 
 

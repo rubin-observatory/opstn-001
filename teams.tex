@@ -8,24 +8,24 @@ As in the ops proposal the primary responsibility of this team is to understand 
 \textbf{This team may be better  in Observatory operations department }
 
 \subsubsection{Science algorithms and pipelines}
-This team is responsible to assess and assure the alert stream and annual data releases. This includes extensive QA to compare the data products against requirements, and responsibility for the underlying software pipelines themselves. Monitoring and updating the calibration plan and algorithmic implementation is also a responsibility of this team. The Calibration Support Scientist on the Observatory Science team will be responsible for monitoring the physical implementation of the calibration plan at the summit.
+This team is responsible to assess and assure the alert stream and annual data releases. This includes extensive \gls{QA} to compare the data products against requirements, and responsibility for the underlying \gls{software} pipelines themselves. Monitoring and updating the calibration plan and algorithmic implementation is also a responsibility of this team. The Calibration Support Scientist on the Observatory Science team will be responsible for monitoring the physical implementation of the calibration plan at the summit.
 
 \subsubsection{Science platform  }
-This team will be responsible for maintaining and evolving LSST’s user access portal, the Science Platform. This will include keeping up with evolving technologies and computing infrastructure, as well as providing basic code-base maintenance, bug fixes, and low-level response to science community and internal LSST requests for new features.
+This team will be responsible for maintaining and evolving LSST’s user access portal, the Science Platform. This will include keeping up with evolving technologies and computing infrastructure, as well as providing basic code-base maintenance, bug fixes, and low-level response to science community and internal \gls{LSST} requests for new features.
 
 \subsubsection{Middleware }
 In a service oriented model with a layered architecture as outlined in \secref{sec:arc} it is essential to have a cross cutting team who compose and debug services.
-Software such as the \texttt{butler}  is not part of the pipeline but the pipeline needs it. In house developments such as Qserv should be covered here (1.5FTE has been included f0r this - DOE/SLAC personnel - could be 2).
+Software such as the \texttt{butler}  is not part of the pipeline but the pipeline needs it. In house developments such as \gls{Qserv} should be covered here (1.5FTE has been included f0r this - DOE/SLAC personnel - could be 2).
 This would also cover the builds and how the code interacts with the infrastructure (\secref{sec:infra}.
 
 \subsubsection{Infrastructure, Site Reliability Engineering  } \label{ses:infra}
 This is for deployment of of various systems and pipelines. Configuration is included in this. There needs to be a couple of people who manage keys/secrets
 for access to commodity services. We would need a security resource as well as database expertise.  This then implies using tooling for system management as
-provided by e.g. AWS console.
+provided by e.g. \gls{AWS} console.
 
-In general an SRE team is responsible for the availability, latency, performance, efficiency, change management, monitoring, emergency response and capacity planning of their services \cite{Beyer:2016:SRE:3006357}.
+In general an \gls{SRE} team is responsible for the availability, latency, performance, efficiency, change management, monitoring, emergency response and capacity planning of their services \cite{Beyer:2016:SRE:3006357}.
 
-This team would include paying for a liaison at any service provider e.g. Amazon professional Services or a Service Manager at NCSA. (2FTE calculated)
+This team would include paying for a liaison at any service provider e.g. Google Professional Services or a Service Manager at \gls{NCSA}. (2FTE calculated)
 
 \subsubsection{Verification/Operations }
 This team will take and verify new releases for operations before they are deployed to the operations system. They will monitor the operational system to make sure it is functioning - they should have some science knowledge to know it is actually working properly as opposed to not just giving errors. A team of 4 should be able to handle this.
