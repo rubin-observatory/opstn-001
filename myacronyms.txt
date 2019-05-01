@@ -109,4 +109,3 @@ UA:University of Arizona
 SDQA:Science Data Quality Assurance
 AMCL:Aura Management Council for LSST
 HDF:Hierarchical Data Format
-VME:Virtual Machine Environment

@@ -5,14 +5,9 @@
 
 % Package imports go here.
 
-\usepackage[nonumberlist,nogroupskip,toc,numberedsection=autolabel]{glossaries}
+\usepackage[nonumberlist,nogroupskip,toc,numberedsection=autolabel,style=index]{glossaries}
 \usepackage{environ}
 \usepackage{enumitem}
-
-\setmonofont[AutoFakeSlant]{Inconsolata}
-
-
-
 
 % Local commands go here.
 
@@ -68,9 +63,7 @@ After the Kavli workshop Petabytes to Science we have a suggested framework for 
 \bibliography{lsst,lsst-dm,refs_ads,refs,books}
 
 %Make sure lsst-texmf/bin/generateAcronyms.py is in your path
-\section{Acronyms and glossary items}\label{sec:acronyms}
-%having problems for now
-%\printnoidxglossaries
+%section{Acronyms and glossary items}\label{sec:acronyms}
 \printglossaries
-\input{acronyms.tex}
+%\input{acronyms.tex}
 \end{document}
