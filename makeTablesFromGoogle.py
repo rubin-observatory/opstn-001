@@ -72,7 +72,7 @@ def outhead(ncols, tout,name, cap):
 
     print (" \\begin{longtable} {", file=tout, end='')
     c =1
-    print (" |p{0.42\\textwidth} ", file=tout, end='')
+    print (" |p{0.3\\textwidth} ", file=tout, end='')
     for c in range(1,ncols,+1):
        print (" |r ", file=tout, end='')
     print ("|} ", file=tout, )
