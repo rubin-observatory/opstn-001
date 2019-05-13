@@ -68,11 +68,11 @@ def outtail( tout):
     tout.close()
     return
 
-def outhead(ncols, tout,name, cap):
+def outhead(ncols, tout,name, cap, width):
 
     print (" \\begin{longtable} {", file=tout, end='')
     c =1
-    print (" |p{0.3\\textwidth} ", file=tout, end='')
+    print (" |p{%f\\textwidth} "%(width), file=tout, end='')
     for c in range(1,ncols,+1):
        print (" |r ", file=tout, end='')
     print ("|} ", file=tout, )
@@ -136,8 +136,8 @@ def main():
 
                 cap=row[1]
                 cols=int(row[2])
-
-                outhead(cols,tout,name,cap)
+                width=float(row[3])
+                outhead(cols, tout, name, cap, width)
                 rowc=0
             else:
                 if name and row:

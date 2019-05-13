@@ -12,7 +12,8 @@
 % Local commands go here.
 
 \input{aglossary.tex}
-\makeglossaries
+%\makeglossaries
+\makenoidxglossaries
 
 % To add a short-form title:
 % \title[Short title]{Title}
@@ -64,6 +65,7 @@ After the Kavli workshop Petabytes to Science we have a suggested framework for 
 
 %Make sure lsst-texmf/bin/generateAcronyms.py is in your path
 %section{Acronyms and glossary items}\label{sec:acronyms}
-\printglossaries
+%\printglossaries
+\printnoidxglossaries
 %\input{acronyms.tex}
 \end{document}
