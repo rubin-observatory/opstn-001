@@ -9,6 +9,7 @@ initial costs could be a little lower with final costs being a little higher. Se
 
 
 We would still require some hardware on the mountain and the base in Chile where we would potentially still keep a copy of the raw data.
+We should consider a hybrid model services at the \gls{LSST} base facility for more realtime work and services in the \gls{cloud} for even short term processing but also long term data processing and releases. An integrated model here can be provided by at least Amazon - analogous to how your mobile phone does some local processing but goes off to big brother for more heavy processing.
 
 The  \gls{LSST} data volumes are in  \tabref{tab:sizes}.
 
@@ -20,3 +21,12 @@ The compute estimates are a little more difficult to extract in \tabref{tab:Inpu
 an estimate is made in terms of FLOPs.
 
 \input{../../dm-docs/DMTN/dmtn-072/Inputs.tex}
+
+\subsubsection {Potential next steps}\label{sec:next}
+
+We should publish the commissioning data - this will require compute and storage and a science platform. This
+we have a greed as a pre ops task on pre ops  money.
+The sizing for this is currently being work on, the max data volume is about 0.5PB its probably much less.
+If we decide this might only have 40 or so users we have a good idea of the processor power required since we ran the platform on Google for \gls{LSST} Europe in 2018 with 40+ users on a few  nodes\footnote{This cost about \$400 for a week - I ht ink it was 3 nodes}.
+
+The correct thing to do here would be spec this up and ask for bids from interested parties to host it for the number of years we need it (up to DR1). With an option of course to expand to DR1. This would allow us to see how this model works on a dataset we were not planning to serve in construction. It would also allow us to become comfortable with our potentially commercial partner and vice versa before DR1.
