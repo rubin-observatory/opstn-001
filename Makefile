@@ -17,8 +17,11 @@ $(OBJ): $(tex) aglossary.tex
 acronyms.tex :$(tex) myacronyms.txt
 	generateAcronyms.py   $(tex)
 
-aglossary.tex :$(tex) myacronyms.txt
+aglossary.tex:
 	generateAcronyms.py  -g $(tex)
+	generateAcronyms.py  -g -u $(tex) aglossary.tex
+	generateAcronyms.py  -g -u $(tex) aglossary.tex
+	generateAcronyms.py  -g -u $(tex) aglossary.tex
 	generateAcronyms.py  -g -u $(tex) aglossary.tex
 
 clean :
