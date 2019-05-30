@@ -18,10 +18,10 @@ This team would include paying for a liaison at any service provider e.g. Google
 
 \subsubsection{Middleware }
 In a service oriented model with a layered architecture as outlined in \secref{sec:arc} it is essential to have a cross cutting team who compose and debug services.
-Software such as the \texttt{butler}  is not part of the \gls{pipeline} but the \gls{pipeline} needs it. In house developments such as \gls{Qserv} should be covered here (1.5FTE has been included for this those are DOE/SLAC personnel, it could be 2FTE).
+Software such as the \texttt{butler}  is not part of the \gls{pipeline} but the \gls{pipeline} needs it. In house developments such as \gls{Qserv} should be covered here (1.5FTE has been included for this those are  DOE/SLAC personnel, it could be 2FTE).
 This would also cover the builds and how the code interacts with the infrastructure (\secref{sec:infra}.
 
-\subsubsection{Services}
+\subsection{Services}
 
 Services contains the provision of compute and storage services for \gls{LSST} independent of the source of those services in a computing center or via commercial \gls{cloud} services.
 
@@ -34,13 +34,10 @@ The main responsibility  of this team  would then be the  underlying \gls{softwa
 That would include monitoring and updating the \gls{calibration} plan and algorithmic implementation. The Calibration Support Scientist on the Observatory Science team will be responsible for monitoring the physical implementation of the \gls{calibration} plan at the summit.
 In \tabref{tab:FTE} this team is initially sized similarly to the AP/DRP teams in construction. There will be significant maintenance in the first two or three years of operations. As mentioned above there may be some consolidation with \gls{QA} activities in System Performance.
 
-\subsubsection{Verification/Operations }
-This team will take and verify new releases for operations before they are deployed to the operations system. They will monitor the operational system to make sure it is functioning - they should have some science knowledge to know it is actually working properly as opposed to not just giving errors. A team of 4 should be able to handle this.
-Some support for this is assumed from IN2P3.
-
 \subsubsection{Science platform  }
 This team will be responsible for maintaining and evolving LSST’s user access portal, the \gls{Science Platform}. This will include keeping up with evolving technologies and computing infrastructure, as well as providing basic code-base maintenance, bug fixes, and low-level response to science community and internal \gls{LSST} requests for new features.
 
-
-
+\subsubsection{Verification/Operations }
+This team will take and verify new releases for operations before they are deployed to the operations system. They will monitor the operational system to make sure it is functioning - they should have some science knowledge to know it is actually working properly as opposed to not just giving errors. A team of 4 should be able to handle this.
+Some support for this is assumed from IN2P3.
 

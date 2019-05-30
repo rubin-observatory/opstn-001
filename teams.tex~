@@ -1,3 +1,4 @@
+
 \newpage
 \subsection{Teams }\label{sec:teams}
 \figref{fig:sciopsorg} introduces several teams some of which were not in the original ops proposal. A little detail is given here about each.
@@ -18,10 +19,10 @@ This team would include paying for a liaison at any service provider e.g. Google
 
 \subsubsection{Middleware }
 In a service oriented model with a layered architecture as outlined in \secref{sec:arc} it is essential to have a cross cutting team who compose and debug services.
-Software such as the \texttt{butler}  is not part of the \gls{pipeline} but the \gls{pipeline} needs it. In house developments such as \gls{Qserv} should be covered here (1.5FTE has been included for this those are DOE/SLAC personnel, it could be 2FTE).
+Software such as the \texttt{butler}  is not part of the \gls{pipeline} but the \gls{pipeline} needs it. In house developments such as \gls{Qserv} should be covered here (1.5FTE has been included for this those are  DOE/SLAC personnel, it could be 2FTE).
 This would also cover the builds and how the code interacts with the infrastructure (\secref{sec:infra}.
 
-\subsubsection{Services}
+\subsection{Services}
 
 Services contains the provision of compute and storage services for \gls{LSST} independent of the source of those services in a computing center or via commercial \gls{cloud} services.
 
